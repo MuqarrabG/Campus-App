@@ -1,3 +1,7 @@
+/*
+  Code in this file comes from "https://github.com/mitchkoko/ModernLoginUI"
+*/
+
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {

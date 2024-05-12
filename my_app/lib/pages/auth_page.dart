@@ -1,3 +1,7 @@
+/*
+  Code in this file comes from "https://github.com/mitchkoko/ModernLoginUI"
+*/
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'login_or_register_page.dart';

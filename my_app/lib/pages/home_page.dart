@@ -1,3 +1,8 @@
+/*
+  Code in this file comes from "https://github.com/mitchkoko/ModernLoginUI"
+  - Changes to code include transforming to match my UI design from Deliverable 1
+*/
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
