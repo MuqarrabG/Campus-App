@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "820058616610",
+    "project_id": "macquarie-app",
+    "storage_bucket": "macquarie-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820058616610:android:4c266b749fe0642921ab7b",
+        "android_client_info": {
+          "package_name": "com.example.my_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv6UHh95gqohRT8PXio0aLr_RINCpi0aM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

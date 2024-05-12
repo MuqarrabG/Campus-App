@@ -27,10 +27,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -44,39 +41,47 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD2PdKMjhLDsQZXwF-Qnp9tuTjfVqwwv9I',
-    appId: '1:637905690799:web:17b30bbb335e097c6fb45a',
-    messagingSenderId: '637905690799',
-    projectId: 'authtutorial-de80c',
-    authDomain: 'authtutorial-de80c.firebaseapp.com',
-    storageBucket: 'authtutorial-de80c.appspot.com',
+    apiKey: 'AIzaSyClJZ0JulgZ1k__V2UwrA4y15fBqpNvI-U',
+    appId: '1:820058616610:web:11ae9842df14c05d21ab7b',
+    messagingSenderId: '820058616610',
+    projectId: 'macquarie-app',
+    authDomain: 'macquarie-app.firebaseapp.com',
+    storageBucket: 'macquarie-app.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA8d-FWDmv6E0QbtoRF6ih_ilZc-1Vj08M',
-    appId: '1:637905690799:android:e8bc54bf75db03016fb45a',
-    messagingSenderId: '637905690799',
-    projectId: 'authtutorial-de80c',
-    storageBucket: 'authtutorial-de80c.appspot.com',
+    apiKey: 'AIzaSyAv6UHh95gqohRT8PXio0aLr_RINCpi0aM',
+    appId: '1:820058616610:android:4c266b749fe0642921ab7b',
+    messagingSenderId: '820058616610',
+    projectId: 'macquarie-app',
+    storageBucket: 'macquarie-app.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyADAlJVsAlvX4yekAxgd84NuU1-ALF0Lm0',
-    appId: '1:637905690799:ios:88f47a6f5de9318a6fb45a',
-    messagingSenderId: '637905690799',
-    projectId: 'authtutorial-de80c',
-    storageBucket: 'authtutorial-de80c.appspot.com',
-    iosClientId: '637905690799-9shnm980f8q6vjk9rbq6eih4tfp1l7jg.apps.googleusercontent.com',
-    iosBundleId: 'com.example.modernlogintute',
+    apiKey: 'AIzaSyCkO9Ezi5IyOPS7mrE6wXdDm48e_JhikEM',
+    appId: '1:820058616610:ios:79fcef804c33ed3821ab7b',
+    messagingSenderId: '820058616610',
+    projectId: 'macquarie-app',
+    storageBucket: 'macquarie-app.appspot.com',
+    iosBundleId: 'com.example.myApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyADAlJVsAlvX4yekAxgd84NuU1-ALF0Lm0',
-    appId: '1:637905690799:ios:88f47a6f5de9318a6fb45a',
-    messagingSenderId: '637905690799',
-    projectId: 'authtutorial-de80c',
-    storageBucket: 'authtutorial-de80c.appspot.com',
-    iosClientId: '637905690799-9shnm980f8q6vjk9rbq6eih4tfp1l7jg.apps.googleusercontent.com',
-    iosBundleId: 'com.example.modernlogintute',
+    apiKey: 'AIzaSyCkO9Ezi5IyOPS7mrE6wXdDm48e_JhikEM',
+    appId: '1:820058616610:ios:79fcef804c33ed3821ab7b',
+    messagingSenderId: '820058616610',
+    projectId: 'macquarie-app',
+    storageBucket: 'macquarie-app.appspot.com',
+    iosBundleId: 'com.example.myApp',
   );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyClJZ0JulgZ1k__V2UwrA4y15fBqpNvI-U',
+    appId: '1:820058616610:web:db3ccbe502c23f7521ab7b',
+    messagingSenderId: '820058616610',
+    projectId: 'macquarie-app',
+    authDomain: 'macquarie-app.firebaseapp.com',
+    storageBucket: 'macquarie-app.appspot.com',
+  );
+
 }
