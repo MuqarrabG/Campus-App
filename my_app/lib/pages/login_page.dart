@@ -73,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -83,9 +83,13 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 50),
             
                 // logo
-                const Icon(
-                  Icons.lock,
-                  size: 100,
+                // const Icon(
+                //   Icons.lock,
+                //   size: 100,
+                // ),
+
+                Image.asset(
+                  'lib/images/uni_logo.PNG',
                 ),
             
                 const SizedBox(height: 50),
@@ -104,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
                 // email textfield
                 MyTextField(
                   controller: emailController,
-                  hintText: 'Email',
+                  hintText: 'Student Email or Number',
                   obscureText: false,
                 ),
             
@@ -137,7 +141,7 @@ class _LoginPageState extends State<LoginPage> {
             
                 // sign in button
                 MyButton(
-                  text: 'Sign In',
+                  text: 'SIGN IN',
                   onTap: signUserIn,
                 ),
             

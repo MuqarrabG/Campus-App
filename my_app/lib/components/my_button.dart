@@ -3,6 +3,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class MyButton extends StatelessWidget {
   final Function()? onTap;
@@ -15,21 +16,25 @@ class MyButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(25),
-        margin: const EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+        // padding: const EdgeInsets.all(25),
+        // margin: const EdgeInsets.symmetric(vertical: 5  horizontal: 20),
         decoration: BoxDecoration(
-          color: Colors.black,
-          borderRadius: BorderRadius.circular(8),
+          color: HexColor("#F70E00"),
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(
+            color: Colors.black,
+            width: 2.0,
+          )
         ),
-        child: Center(
-          child: Text(
-            text,
-            style: const TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-            ),
+        child: Text(
+          text,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
           ),
+          textAlign: TextAlign.center,
         ),
       ),
     );
