@@ -67,6 +67,8 @@ flutter:
   assets:
   - lib/images/
   - lib/images/mq_cafes.webp
+  - lib/images/icons8-open-sign-50.png
+  - lib/images/icons8-close-sign-50.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
