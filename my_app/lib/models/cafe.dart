@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_app/models/cafeitem.dart';
 
 class Cafe extends ChangeNotifier {
-  // String name;
-  // bool isOpen;
-
-  // Cafe(this.name, this.isOpen);
-
   final List<CafeItem> _shop = [
     CafeItem(
       name: "Coffee", 
@@ -52,6 +47,12 @@ class Cafe extends ChangeNotifier {
   // add item to cart
   void addItemToCart(CafeItem item, int quantity) {
     _userCart.add(item);
+    updateShopItem(0, CafeItem(
+      name: "Coffee", 
+      basePrice: 3.50, 
+      imagePath: "lib/images/coffee.jpg", 
+      isCoffee: true
+    ),);
     notifyListeners();
   }
 
@@ -59,5 +60,12 @@ class Cafe extends ChangeNotifier {
   void removeItemFromCart(CafeItem item) {
     _userCart.remove(item);
     notifyListeners();
+  }
+
+  void updateShopItem(int index, CafeItem newItem) {
+    if (index >= 0 && index < _shop.length) {
+      _shop[index] = newItem;
+      notifyListeners();
+    }
   }
 }
