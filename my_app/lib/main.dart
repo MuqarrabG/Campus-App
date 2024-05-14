@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/models/cafe.dart';
 import 'package:my_app/pages/auth_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:my_app/pages/cafe_page.dart';
+import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -16,9 +19,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: AuthPage(),
+    // return MaterialApp(
+    //   debugShowCheckedModeBanner: false,
+    //   home: AuthPage(),
+    // );
+
+    return ChangeNotifierProvider(
+      create: (context) => Cafe(),
+      builder: (context, child) => const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: AuthPage(),
+      ),
     );
   }
 }

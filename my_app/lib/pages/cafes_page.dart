@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:my_app/models/cafe.dart';
 import 'package:my_app/pages/cafe_page.dart';
 
+class localCafe {
+  String name;
+  bool isOpen;
+
+  localCafe(this.name, this.isOpen);
+}
+
 class CafesPage extends StatefulWidget {
   CafesPage({super.key});
 
@@ -10,14 +17,14 @@ class CafesPage extends StatefulWidget {
 }
 
 class _CafesPageState extends State<CafesPage> {
-  final List<Cafe> cafes = [
-    Cafe("Esc Cafe", true),
-    Cafe("Crunch Cafe", false),
-    Cafe("Cult Eatery", false),
-    Cafe("Library Cafe", false),
-    Cafe("Piccolo Me", false),
-    Cafe("St Laurent Cafe", false),
-    Cafe("Taste Baguette", false),
+  final List<localCafe> cafes = [
+    localCafe("Esc Cafe", true),
+    localCafe("Crunch Cafe", false),
+    localCafe("Cult Eatery", false),
+    localCafe("Library Cafe", false),
+    localCafe("Piccolo Me", false),
+    localCafe("St Laurent Cafe", false),
+    localCafe("Taste Baguette", false),
   ];
 
   void navigateToCafe(String cafeName, BuildContext context) {
