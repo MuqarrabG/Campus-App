@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_app/components/cafe_item_tile.dart';
 import 'package:my_app/models/cafe.dart';
 import 'package:my_app/models/cafeitem.dart';
+import 'package:my_app/pages/cafe_order_page.dart';
 import 'package:provider/provider.dart';
 
 class CafePage extends StatefulWidget {
@@ -14,15 +15,16 @@ class CafePage extends StatefulWidget {
 
 class _CafePageState extends State<CafePage> {
 
-  void goToCoffeePage(CafeItem coffee) {
-    // Navigator.push(
-    //   context,
-    //   MaterialPageRoute(
-    //     builder: (context) => CoffeeOrderPage(
-    //       coffee: coffee,
-    //     ),
-    //   ),
-    // );
+  void goToCoffeePage(CafeItem item) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => CafeOrderPage(
+          item: item,
+          cafeName: widget.cafeName
+        ),
+      ),
+    );
   }
   @override
   Widget build(BuildContext context) {
@@ -45,11 +47,11 @@ class _CafePageState extends State<CafePage> {
                 itemCount: value.cafe.length,
                 itemBuilder: (context, index) {
                   // get individual coffee
-                  CafeItem eachCoffee = value.cafe[index];
+                  CafeItem item = value.cafe[index];
                   // return the tile for this coffee
                   return CafeItemTile(
-                    item: eachCoffee,
-                    onPressed: () => goToCoffeePage(eachCoffee),
+                    item: item,
+                    onPressed: () => goToCoffeePage(item),
                   );
                 },
               ),
