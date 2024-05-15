@@ -26,10 +26,10 @@ class CategoryTile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(6.0),
               child: Image.asset(
                 imagePath,
-                height: 170,
+                height: 130,
               ),
             ),
             Text(

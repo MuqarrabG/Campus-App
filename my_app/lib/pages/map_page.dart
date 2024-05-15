@@ -10,6 +10,18 @@ class MapPage extends StatefulWidget {
 class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Map"),);
+    return Scaffold(
+      body: InteractiveViewer(
+        panEnabled: true,
+        minScale: 1,
+        maxScale: 4,
+        child: Center(
+          child: Image.asset(
+            'lib/images/mq-campus-map.png',
+            fit: BoxFit.contain,
+          ),
+        ),
+      ),
+    );
   }
 }
