@@ -124,6 +124,35 @@ class CafeItem {
 
     return price;
   }
+
+  // Convert a CafeItem into a Map. The keys must correspond to the names of the
+  // fields in the JSON object.
+  Map<String, dynamic> toJson() => {
+        'name': name,
+        'imagePath': imagePath,
+        'isCoffee': isCoffee,
+        'basePrice': basePrice,
+        'price': _price,
+        'extraShot': _extraShot,
+        'milk': _milk.toString().split('.').last,
+        'size': _size.toString().split('.').last,
+        'type': _type.toString().split('.').last,
+      };
+
+  // Convert a Map into a CafeItem. The keys must correspond to the names of the
+  // fields in the JSON object.
+  factory CafeItem.fromJson(Map<String, dynamic> json) {
+    return CafeItem(
+      name: json['name'],
+      basePrice: json['basePrice'],
+      imagePath: json['imagePath'],
+      isCoffee: json['isCoffee'],
+      extraShot: json['extraShot'],
+      size: Size.values.firstWhere((e) => e.toString() == 'Size.' + json['size']),
+      type: Type.values.firstWhere((e) => e.toString() == 'Type.' + json['type']),
+      milk: Milk.values.firstWhere((e) => e.toString() == 'Milk.' + json['milk']),
+    );
+  }
 }
 
 

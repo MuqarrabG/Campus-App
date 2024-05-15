@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/models/cafeitem.dart';
+import 'package:my_app/models/cafe_item.dart';
+import 'package:my_app/models/cart_item.dart';
 
 class Cafe extends ChangeNotifier {
   final List<CafeItem> _shop = [
@@ -39,14 +40,22 @@ class Cafe extends ChangeNotifier {
   List<CafeItem> get cafe => _shop;
 
   // user cart
-  List<CafeItem> _userCart = [];
+  List<CartItem> _userCart = [];
 
   // get user cart
-  List<CafeItem> get userCart => _userCart;
+  List<CartItem> get userCart => _userCart;
 
   // add item to cart
   void addItemToCart(CafeItem item, int quantity) {
-    _userCart.add(item);
+    // Check if item already exists in cart
+    final index = _userCart.indexWhere((cartItem) => cartItem.item == item);
+    if (index >= 0) {
+      // If item exists, increase the quantity
+      _userCart[index].quantity += quantity;
+    } else {
+      // If item does not exist, add new item to cart
+      _userCart.add(CartItem(item: item, quantity: quantity));
+    }
     updateShopItem(0, CafeItem(
       name: "Coffee", 
       basePrice: 3.50, 
@@ -57,8 +66,21 @@ class Cafe extends ChangeNotifier {
   }
 
   // remove item from cart
-  void removeItemFromCart(CafeItem item) {
-    _userCart.remove(item);
+  void removeItemFromCart(CartItem item) {
+    _userCart.removeWhere((cartItem) => cartItem == item);
+    notifyListeners();
+  }
+
+  double cartTotal() {
+    double total = 0.0;
+    _userCart.forEach((element) {
+      total += element.item.price * element.quantity;
+    });
+    return total;
+  }
+
+  void clearCart() {
+    _userCart.clear();
     notifyListeners();
   }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/components/my_button.dart';
 import 'package:my_app/models/cafe.dart';
-import 'package:my_app/models/cafeitem.dart';
+import 'package:my_app/models/cafe_item.dart';
 import 'package:provider/provider.dart';
 
 class CafeOrderPage extends StatefulWidget {
@@ -82,9 +82,7 @@ class _CafeOrderPageState extends State<CafeOrderPage> {
   // Add to cart
   void addToCart() {
     if (quantity > 0) {
-      for (int i = 0; i < quantity; i++) {
-        Provider.of<Cafe>(context, listen: false).addItemToCart(widget.item, quantity);
-      }
+      Provider.of<Cafe>(context, listen: false).addItemToCart(widget.item, quantity);
       Navigator.pop(context);
 
       showDialog(
