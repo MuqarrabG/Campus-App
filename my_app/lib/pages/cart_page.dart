@@ -19,25 +19,6 @@ class _CartPageState extends State<CartPage> {
   void removeItemFromCart(CartItem item) {
     Provider.of<Cafe>(context, listen: false).removeItemFromCart(item);
   }
-
-  // order button
-  // void order() async {
-  //   await Order.saveOrder(Provider.of<Cafe>(context, listen: false).userCart);
-  //   Provider.of<Cafe>(context, listen: false).clearCart();
-    
-  //   Navigator.popUntil(context, ModalRoute.withName('/'));
-
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) => const AlertDialog(
-  //       backgroundColor: Colors.brown,
-  //       title: Text(
-  //         "Order Successful",
-  //         style: TextStyle(color: Colors.white),
-  //       ),
-  //     ),
-  //   );
-  // }
   @override
   Widget build(BuildContext context) {
      final cafe = Provider.of<Cafe>(context);

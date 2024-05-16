@@ -154,29 +154,3 @@ class CafeItem {
     );
   }
 }
-
-
-// void main() {
-//   CafeItem item = CafeItem(
-//     name: "Coffee",
-//     price: "3.50",
-//     imagePath: "path/to/image.png",
-//     isCoffee: true,
-//   );
-
-//   print("Item: ${item.name}, Size: ${item.size}, Price: \$${item.price}");
-
-//   // Change the size to regular
-//   item.size = Size.regular;
-//   item.milk = Milk.oatMilk;
-//   item.shot = true;
-//   print("Item: ${item.name}, Size: ${item.size}, Price: \$${item.price}");
-
-//   //should not change the price
-//   item.size = Size.regular;
-//   print("Item: ${item.name}, Size: ${item.size}, Price: \$${item.price}");
-
-//   // Change the size to large
-//   item.size = Size.large;
-//   print("Item: ${item.name}, Size: ${item.size}, Price: \$${item.price}");
-// }
