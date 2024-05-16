@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/const.dart';
 import 'package:my_app/models/cafe.dart';
 import 'package:my_app/pages/cafe_page.dart';
 
@@ -46,13 +47,14 @@ class _CafesPageState extends State<CafesPage> {
       appBar: AppBar(
         title: const Text('Cafes', style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
+        iconTheme: IconThemeData(color: myColor),
       ),
       body: ListView.builder(
         itemCount: cafes.length,
         itemBuilder: (context, index) {
           final cafe = cafes[index];
           return ListTile(
-            leading: const Icon(Icons.coffee, size: 30, color: Colors.black,),  // Custom icon for each cafe
+            leading: const Icon(Icons.coffee, size: 30),  // Custom icon for each cafe
             title: Text(cafe.name, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,

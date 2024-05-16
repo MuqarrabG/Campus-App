@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:my_app/const.dart';
 
 class MyBottomNavBar extends StatelessWidget {
   void Function(int)? OnTabChange;
@@ -12,12 +14,13 @@ class MyBottomNavBar extends StatelessWidget {
       child: GNav(
         gap: 8,
         onTabChange: (value) => OnTabChange!(value),
-        color: Colors.grey[400],
+        color: Theme.of(context).colorScheme.primary,
         //mainAxisAlignment: MainAxisAlignment.center,
-        activeColor: Colors.grey[700],
-        tabBackgroundColor: Colors.grey.shade300,
+        activeColor: myColor,
+        //backgroundColor: Theme.of(context).colorScheme.background,
+        tabBackgroundColor: Theme.of(context).colorScheme.background,
         tabBorderRadius: 24,
-        tabActiveBorder: Border.all(color: Colors.white),
+        tabActiveBorder: Border.all(color: myColor),
         tabs: const [
           GButton(
             icon: Icons.home, 

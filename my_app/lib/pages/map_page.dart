@@ -11,6 +11,10 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Campus Map"),
+        backgroundColor: Theme.of(context).colorScheme.background,
+      ),
       body: InteractiveViewer(
         panEnabled: true,
         minScale: 1,

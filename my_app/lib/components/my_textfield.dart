@@ -3,6 +3,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:my_app/const.dart';
 
 class MyTextField extends StatelessWidget {
   final controller;
@@ -23,6 +24,7 @@ class MyTextField extends StatelessWidget {
       child: TextField(
         controller: controller,
         obscureText: obscureText,
+        //style: TextStyle(color: myColor),
         decoration: InputDecoration(
             enabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.white),
@@ -30,10 +32,11 @@ class MyTextField extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.grey.shade400),
             ),
-            fillColor: Colors.grey.shade200,
+            fillColor: Theme.of(context).colorScheme.primary,
             filled: true,
             hintText: hintText,
-            hintStyle: TextStyle(color: Colors.grey[500])),
+            hintStyle: TextStyle(color: Colors.grey[500]),
+            ),
       ),
     );
   }

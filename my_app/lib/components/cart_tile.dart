@@ -17,8 +17,8 @@ class CartTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.grey[200],
-        borderRadius: BorderRadius.circular(12),
+        color: Theme.of(context).colorScheme.primary,
+        borderRadius: BorderRadius.circular(25),
       ),
       margin: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),

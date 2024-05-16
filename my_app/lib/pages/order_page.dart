@@ -20,8 +20,10 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         title: Text('Orders'),
+        backgroundColor: Theme.of(context).colorScheme.background,
       ),
       body: FutureBuilder<List<List<CartItem>>>(
         future: _ordersFuture,

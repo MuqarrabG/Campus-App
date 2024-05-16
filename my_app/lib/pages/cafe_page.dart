@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/components/cafe_item_tile.dart';
+import 'package:my_app/const.dart';
 import 'package:my_app/models/cafe.dart';
 import 'package:my_app/models/cafe_item.dart';
 import 'package:my_app/pages/cafe_order_page.dart';
@@ -33,6 +34,7 @@ class _CafePageState extends State<CafePage> {
       appBar: AppBar(
         title: Text(widget.cafeName, style: const TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
+        iconTheme: IconThemeData(color: myColor),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -40,7 +42,7 @@ class _CafePageState extends State<CafePage> {
         })),
         child: Icon(
           Icons.shopping_cart,
-          color: Colors.red,
+          color: myColor,
         ),
       ),
       body: Consumer<Cafe>(

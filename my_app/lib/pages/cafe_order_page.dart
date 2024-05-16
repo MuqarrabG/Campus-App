@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/components/my_button.dart';
+import 'package:my_app/const.dart';
 import 'package:my_app/models/cafe.dart';
 import 'package:my_app/models/cafe_item.dart';
 import 'package:provider/provider.dart';
@@ -101,26 +102,20 @@ class _CafeOrderPageState extends State<CafeOrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        backgroundColor: Colors.grey[200],
+        iconTheme: IconThemeData(color: myColor),
+        backgroundColor: Theme.of(context).colorScheme.background,
         title: Text(
           "${widget.cafeName} Order",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: Colors.grey[900],
-          ),
-          onPressed: () => Navigator.pop(context),
-        ),
       ),
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.grey[200],
+          color: Theme.of(context).colorScheme.background,
           borderRadius: BorderRadius.circular(8),
         ),
         child: SingleChildScrollView(
@@ -144,6 +139,7 @@ class _CafeOrderPageState extends State<CafeOrderPage> {
                     Checkbox(
                       value: extraShot,
                       onChanged: toggleExtraShot,
+                      activeColor: myColor,
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -273,6 +269,7 @@ class _CafeOrderPageState extends State<CafeOrderPage> {
               Checkbox(
                 value: isSelected,
                 onChanged: (bool? value) => onTap(),
+                activeColor: myColor,
               ),
               Text(label),
             ],
