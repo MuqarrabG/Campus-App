@@ -19,6 +19,7 @@ This is a Flutter application for ordering items from a cafe. The app allows use
 - View and manage items in the cart
 - Place orders and save them locally
 - View past orders
+- Login/Register via email or google account
 
 ## Installation
 
